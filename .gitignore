@@ -1,0 +1,24 @@
+# Terraform
+*.tfstate
+*.terraform*
+*.tfstate.backup
+
+# Terragrunt
+.terragrunt-cache
+
+# OS X
+.history
+.DS_Store
+
+# IntelliJ
+.idea_modules
+*.iml
+*.iws
+*.ipr
+.idea/
+build/
+*/build/
+out/
+
+.dotenv
+.env
