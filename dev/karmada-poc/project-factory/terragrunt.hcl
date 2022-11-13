@@ -11,7 +11,4 @@ include {
 inputs = {
   random_project_id = false
   name              = include.inputs.project_id
-  org_id            = include.inputs.org_id
-  billing_account   = include.inputs.billing_account
-  folder_id         = include.inputs.folder_id
 }
