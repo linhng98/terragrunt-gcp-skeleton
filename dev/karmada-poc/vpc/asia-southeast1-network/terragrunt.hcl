@@ -14,7 +14,13 @@ inputs = {
     {
       subnet_name = "serverless-cluster-a-primary-subnet",
       subnet_ip = "192.168.0.0/21",
-      subnet_region = "us-west1"
+      subnet_region = "asia-southeast1"
+      subnet_private_access = "true"
+    },
+    {
+      subnet_name = "serverless-cluster-b-primary-subnet",
+      subnet_ip = "192.168.8.0/21",
+      subnet_region = "asia-southeast1"
       subnet_private_access = "true"
     },
   ]
@@ -28,6 +34,16 @@ inputs = {
       {
         range_name = "serverless-cluster-a-service-secondary-subnet"
         ip_cidr_range = "10.4.0.0/14"
+      }
+    ]
+    serverless-cluster-b-primary-subnet = [
+      {
+        range_name = "serverless-cluster-b-pod-secondary-subnet"
+        ip_cidr_range = "10.8.0.0/14"
+      },
+      {
+        range_name = "serverless-cluster-b-service-secondary-subnet"
+        ip_cidr_range = "10.12.0.0/14"
       }
     ]
   }
