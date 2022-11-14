@@ -1,10 +1,10 @@
 locals {
   project_vars = read_terragrunt_config(find_in_parent_folders("project.hcl"))
-  env_vars = read_terragrunt_config(find_in_parent_folders("env.hcl"))
+  env_vars     = read_terragrunt_config(find_in_parent_folders("env.hcl"))
 
   org = {
     org_name = "realsnkr"
-    org_id = "656136594954"
+    org_id   = "656136594954"
   }
   project_id = local.project_vars.locals.project_id
 }

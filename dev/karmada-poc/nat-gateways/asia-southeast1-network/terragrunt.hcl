@@ -3,7 +3,7 @@ terraform {
 }
 
 include {
-  path = find_in_parent_folders()
+  path   = find_in_parent_folders()
   expose = true
 }
 
@@ -12,9 +12,9 @@ dependency "vpc" {
 }
 
 inputs = {
-  name = "cloud-router-${basename(get_terragrunt_dir())}"
+  name    = "cloud-router-${basename(get_terragrunt_dir())}"
   network = dependency.vpc.outputs.network_name
-  region = "asia-southeast1"
+  region  = "asia-southeast1"
 
   nats = [
     {
