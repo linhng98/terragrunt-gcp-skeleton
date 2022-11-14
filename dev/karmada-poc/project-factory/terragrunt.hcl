@@ -11,4 +11,12 @@ include {
 inputs = {
   random_project_id = false
   name              = include.inputs.project_id
+  activate_apis = [
+    "cloudresourcemanager.googleapis.com",
+    "compute.googleapis.com",
+    "container.googleapis.com",
+    "sqladmin.googleapis.com",
+    "servicenetworking.googleapis.com",
+    "redis.googleapis.com",
+  ]
 }
