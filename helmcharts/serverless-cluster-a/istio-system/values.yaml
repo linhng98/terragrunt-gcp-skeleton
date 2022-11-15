@@ -1,0 +1,57 @@
+---
+base:
+  global:
+    istioNamespace: istio-system
+
+istiod:
+  meshConfig:
+    enableTracing: true
+    defaultConfig:
+      tracing:
+        sampling: 100
+  pilot:
+    resources:
+      requests:
+        cpu: 100m
+        memory: 50Mi
+  global:
+    proxy:
+      resources:
+        requests:
+          cpu: 10m
+          memory: 128Mi
+        limits:
+          cpu: 200m
+          memory: 500Mi
+      tracer: zipkin
+    tracer:
+      zipkin:
+        address: otel-collector-collector.otel-collector:9411
+
+gateway:
+  name: istio-ingressgateway
+  replicaCount: 1
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 100m
+      memory: 1024Mi
+
+kiali-operator:
+  cr:
+    create: true
+    spec:
+      deployment:
+        accessible_namespaces:
+          - '**'
+      auth:
+        strategy: anonymous
+      server:
+        web_root: /
+      external_services:
+        prometheus:
+          url: http://mimir-nginx.mimir/prometheus
+          custom_headers:
+            X-Scope-OrgID: homelab

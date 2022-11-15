@@ -42,6 +42,7 @@ inputs = {
   node_pools = [
     {
       name         = "worker-pool"
+      machine_type = "n1-standard-1"
       min_count    = 1
       max_count    = 2
       disk_size_gb = 100
