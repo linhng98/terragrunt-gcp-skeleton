@@ -1,0 +1,10 @@
+karmada-system:
+  installMode: "host"
+
+  clusterDomain: "cluster.local"
+
+  components: [
+    "schedulerEstimator",
+    "descheduler",
+    "search",
+  ]

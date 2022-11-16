@@ -22,3 +22,7 @@ out/
 
 .dotenv
 .env
+
+# Helm
+charts
+Chart.lock
