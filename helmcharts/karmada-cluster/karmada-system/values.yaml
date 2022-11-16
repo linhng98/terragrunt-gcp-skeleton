@@ -1,5 +1,180 @@
-karmada-system:
+karmada:
   installMode: "host"
+
+  certs:
+    mode: auto
+    custom:
+      caCrt: |
+        -----BEGIN CERTIFICATE-----
+        MIIFGDCCAwCgAwIBAgIUAeMEUUCkpfWnc+yWgoe2NQRrmxowDQYJKoZIhvcNAQEL
+        BQAwJDEQMA4GA1UECgwHa2FybWFkYTEQMA4GA1UEAwwHa2FybWFkYTAeFw0yMjEx
+        MTYxMzU2NTNaFw0zMjExMTMxMzU2NTNaMCQxEDAOBgNVBAoMB2thcm1hZGExEDAO
+        BgNVBAMMB2thcm1hZGEwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDN
+        y8DsCixmlJFztLdaqzGm1mzy3QR+oQ3ztTo/adM0CUmxIMq+iYZhKOhbni3rQnHi
+        ngKkpwnHNu9ch49MSO8yuhFcjaFNOmHVczhNHNRnhBAGIPCxqPjLO9hb8z4RgLXf
+        tU6m2UXj4D23lWHwBtatU7bWb7lVj6tHGyfqGDC32n3jYjkGZQ8/rUzOo0bVSUSC
+        azygH/9+cLt5FLl8HOWWOZtDtZISth6iQHDV5qhkEgAAboS63dMWimaxmCiAcmBJ
+        9bHETtV4bTma2fzsz/GMRRv1qddnxopPN73aYXYDxtf1e0t22cGaIBClXVKQKnqm
+        4ieHs4qXPKjUK6sZmE6/J73XolpQlsF2KsU5zqZF2MAdv57tOTOzO+DwD2T+t8+z
+        q+/0g2pLHEybLPt7J6gWVVwwWyherkBtlNBj1YO9FgOVxpJT3EVphaVk0M6RFwOV
+        5hYyMyHGu3F2bSRPUCtcz3rx5UEL6MHVwsdZ40aD94h8t4vF8Qn1RxL8vsplbA/A
+        /Sf+Q1d8wu5eOiFUiEyXWeGxFxC/fNmenoMcPmWL0vmDlMT1HCXgjuuE5qtxutsx
+        5uLyI9EInMmg6BOG6BAnpJj7IYh/wdthykbqJIpx5TgYhLg0MHPPRmLgbuqs5bMd
+        8lwmJFfEB6WrI7MzLgp10zUK/lNzzkL+tgf6/WCFsQIDAQABo0IwQDAdBgNVHQ4E
+        FgQUzgGNBib5LEIFf5T9eqGcCE4n3GgwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8B
+        Af8EBAMCAuQwDQYJKoZIhvcNAQELBQADggIBAMx3GUtkB/5Tbs1aLuDzoybqqOA8
+        H0g+EvNgxap8SLJcgd1bHfC7kpaBjexw7Af7KRBRINZaeue91Nyq3stgn37oI/dw
+        mEzfChaWA1qSH0Ob7y2u378NQOx3Q6He7wRBjUYB3wDzMSkgY0NDp3Di65gYywv4
+        NcZ7oyDD3A7jTw6A93AqWBZiepWiD8/IWw6z2ACoJx488y+DM1+fLynulJIbgX8E
+        ldhfFu9kJjtxON5OhDYgtbmDrHf/gidHZU0JpgHeFUIOem1ZReTFieyWvbflP2eI
+        Xowq2xAO9VUBKT9x3K6p4+Ft2Uo6mLJGhh5iSvZnglsMcMSrzS5+L/Opp7vS8cqS
+        Mpt/ztaMhvVz5eFfEgumQ34ypNL/RgowwOclBzFHK0b7OrBJbE2FxE8sVNx6lQH3
+        oXc/PgXfn/5IrfNz7/JzyDmHfxSORSA6B4fwWdMbm9ne0xdxE3wHYXYN+Cjj3oxq
+        7/dpvYiPqwx7RdsN5pVqMCqT7qxqTRuEGOgY4L1D5psT1CHrlmM97uJVaeX36tO7
+        QhNcumPXvvb721ziFpcKuCBMXegCA3mmTp8vlKkHarTCfeSOCav4/f8CDhJ4vk+r
+        nDByGEoTVVPjPeIFm7b9/glUw8uf7dPBOs/52OzFmoJV292pMONB/kP30mqDiM4f
+        FsxkD+cMszSeGyYT
+        -----END CERTIFICATE-----
+      ## @param certs.custom.crt crt of the certificate
+      crt: |
+        -----BEGIN CERTIFICATE-----
+        MIID1DCCAbygAwIBAgIUTeyQpt40Eij9A1oBh1Y3/wRn1PkwDQYJKoZIhvcNAQEL
+        BQAwJDEQMA4GA1UECgwHa2FybWFkYTEQMA4GA1UEAwwHa2FybWFkYTAeFw0yMjEx
+        MTYxNDAyMTNaFw0yMzExMTYxNDAyMTNaMCQxEDAOBgNVBAoMB2thcm1hZGExEDAO
+        BgNVBAMMB2thcm1hZGEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDL
+        j+wwUWSjUp4sUdvvbCsQkQ+6V4pCPqp91GQn2zmB5hFD64LqgQRyy2qxPr2lTjk9
+        QLA9OF0AR84va71MNdGeXQ2D3wpEiOGnRc4Md9QDk5pT620JGyXx5RR82DsSxjPu
+        lP3UYlOCZUBINV4c5vqQ5vZVZLzrhrB8DCfwLQLTsjO4Hi72I4Hx1z10q1zZkaZl
+        8XccFGX86b5KWJVwRzJ2lf4sbrdnDPxfjWymTUj3JVx80j5OQ5nmMHam4jI2yNp6
+        pcbiirC3Zow3mMQGXMeBfjEN9O4qKAcMiscIZQeNvDBTihGG6gdrA3Y9XbN5eYo1
+        2OEokKXe3F35OlXkX/mpAgMBAAEwDQYJKoZIhvcNAQELBQADggIBALXLKm3unKCw
+        bihRQs2QKmXEBtWNfEjpGSVM4hoEv3y8BVOTo60PR7SfFEbHK80NRG9dK1UHgfOf
+        iBvoOxcvfyEPVYJAyb9+tmJHmnY2l++6jWbon+O1I+jJuXIAyssSEC29SmCbf+gR
+        yES1wnucimSPVipR+c9AsN85v0T5GE+W6KLN9gGpqfGDGmtl/JoB9IiCxaG2inm+
+        AUGzZ886ZB7TGdu29/Y8sPISBb5yLzektvmF5N8RzBGEmiIMCGlohBN4pUCxIj2I
+        BVmRmJZ/czPONkyZvUChM8Gqol5YtsQoEfGyQMZOPmS+E+ejA0LaqpJsfmpAkKAz
+        lvBG3RAc+v/RZpwU60rtcjiIylrHaqIWq3WWMleLnuVKpBzIaCpTyDedDZ/hUjdX
+        N+P5pyLe1CoXvxZnyr+OVE180sLErmQnPj75F2KSgTRNKAh63vuWqxqFdybRqzGA
+        M0eYBHjMyH7SRXLp6MDdYDGZxTn21y2L+EfrjeFEGHABBGXNek+9E80wuiONtrPO
+        +kk6Jr/Dcpx55ltwwtA+RH4PvLtuqflF4B4Ag5Zu95EIemykjEvjy5TOIRUEkVOv
+        FXtTW8pkUzzYt6Xsu2dLreIwWvYF89xYSlSGNaSqL1VuXiH+qiXPSLT+X8ZumFud
+        E2jaUYlIqsHJFnH3oXXkp2gwAJEb7FLs
+        -----END CERTIFICATE-----
+      ## @param certs.custom.key key of the certificate
+      key: |
+        -----BEGIN RSA PRIVATE KEY-----
+        MIIEpAIBAAKCAQEAy4/sMFFko1KeLFHb72wrEJEPuleKQj6qfdRkJ9s5geYRQ+uC
+        6oEEcstqsT69pU45PUCwPThdAEfOL2u9TDXRnl0Ng98KRIjhp0XODHfUA5OaU+tt
+        CRsl8eUUfNg7EsYz7pT91GJTgmVASDVeHOb6kOb2VWS864awfAwn8C0C07IzuB4u
+        9iOB8dc9dKtc2ZGmZfF3HBRl/Om+SliVcEcydpX+LG63Zwz8X41spk1I9yVcfNI+
+        TkOZ5jB2puIyNsjaeqXG4oqwt2aMN5jEBlzHgX4xDfTuKigHDIrHCGUHjbwwU4oR
+        huoHawN2PV2zeXmKNdjhKJCl3txd+TpV5F/5qQIDAQABAoIBAGuz64CpH/k19lB2
+        w0pLTgHG7q5mMNXZ+DT5UkCwQh4Tj2EDU9Iljyf5rqq3CnpTB//7oQPTNYm3dEUs
+        2QxgkVcb3tG+Cd23GsV5Lor0P63gw8/RCXC+93WkAhIICkFlswZxuFdN6udcEQXj
+        jrb2Eu7l9MG7uiVXrzsC54KxHgTJGqtkOYwbFEh3BJc8D5pYJtUOaSQdWCJ4ZbFo
+        rNVJQm9VYYx9K/FDslXgZOSOqp2PzF/NvDODdc5hltzydiIwTfLvP66GN/o6Ndeb
+        vdS32QizVKsU7oI45CKD7wXNLrmN/G2ddwSd049hCxkFS/KH4IZvC+Ek7N1+Oe1Q
+        SXdCFc0CgYEA/UXELNYFRHProBocavCO8kmyNaIFCLxtcsFIIYfGSNkbJAOYwd9n
+        ms0iorZSOc7Lqdhp6DG/m6K7DOnw/mXG93aCN/j6MGnCVDiYLPRi1I8sx3sp9UNk
+        fpgt1AeEzBUJnVuvVjLYba8JOnDUi4C4S8sM1j0bUXTpdNzjBXs7chsCgYEAzcEc
+        zhTVIAP7r8tRru/9OWQnd4Aj0BnJwxKJlMyPD2VqfDxo5YctGlSnf+cUiyLPaQnJ
+        tWhCN5XGPvcd2ImelETexIzlUaXXx6zGef5CWNNhl8WtqHT0UPKFQ1Df9m+8ptxJ
+        pZmfpwd9+hOSD2F3jEJyErMqZNKk7g+D95dTX4sCgYAfWnCjoEb8p2EG69SSxH7d
+        rZPbIdh/sVvXNegpBnbcc8vxVGSns3FO75AXFnztXRVHTFwn+2id6rI/MgK8a3sL
+        DWenaDIIpj8BUBQ+lG5bo/HGLBAQpaweI9agheHBpeUPztbQ0/CI+38n9enJ70Bh
+        WZyYNO5Z0iBIcEPGXPAJ+wKBgQCdErKZxJ+bLE9EudOm2AEZghL7EHDGmhlD+W/c
+        j3kbSNHM/BUcPGC7PCsO4mr1eOKcDmPVQD1kz8sjIGXBe/X6vMTPibw6439iKMzw
+        LqGZy+0x/y/+bSJidXI0nJYNPOno/Dyg1jFiQr7yXWRgp4irI8KP8gUIKSLNtjyJ
+        lBWK1wKBgQDiTxM6eeiUHlWIzD8larmRHXtmKYaSHhnV9s+MDKaRx9vvhCFqh1pY
+        AAVicwXo7Um776xN8ajfyzaJ2hjTEYO46GssfoeCGAxGTace96x/S+PiZHtglR4O
+        tQtJXkxTBVKG6Nxq7cj9vIBQCKD1FZKS0BULXFNwhKgbXQ1ph37Oug==
+        -----END RSA PRIVATE KEY-----
+      ## @param certs.custom.frontProxyCaCrt ca of the front proxy certificate
+      frontProxyCaCrt: |
+        -----BEGIN CERTIFICATE-----
+        MIIFGDCCAwCgAwIBAgIUAeMEUUCkpfWnc+yWgoe2NQRrmxowDQYJKoZIhvcNAQEL
+        BQAwJDEQMA4GA1UECgwHa2FybWFkYTEQMA4GA1UEAwwHa2FybWFkYTAeFw0yMjEx
+        MTYxMzU2NTNaFw0zMjExMTMxMzU2NTNaMCQxEDAOBgNVBAoMB2thcm1hZGExEDAO
+        BgNVBAMMB2thcm1hZGEwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDN
+        y8DsCixmlJFztLdaqzGm1mzy3QR+oQ3ztTo/adM0CUmxIMq+iYZhKOhbni3rQnHi
+        ngKkpwnHNu9ch49MSO8yuhFcjaFNOmHVczhNHNRnhBAGIPCxqPjLO9hb8z4RgLXf
+        tU6m2UXj4D23lWHwBtatU7bWb7lVj6tHGyfqGDC32n3jYjkGZQ8/rUzOo0bVSUSC
+        azygH/9+cLt5FLl8HOWWOZtDtZISth6iQHDV5qhkEgAAboS63dMWimaxmCiAcmBJ
+        9bHETtV4bTma2fzsz/GMRRv1qddnxopPN73aYXYDxtf1e0t22cGaIBClXVKQKnqm
+        4ieHs4qXPKjUK6sZmE6/J73XolpQlsF2KsU5zqZF2MAdv57tOTOzO+DwD2T+t8+z
+        q+/0g2pLHEybLPt7J6gWVVwwWyherkBtlNBj1YO9FgOVxpJT3EVphaVk0M6RFwOV
+        5hYyMyHGu3F2bSRPUCtcz3rx5UEL6MHVwsdZ40aD94h8t4vF8Qn1RxL8vsplbA/A
+        /Sf+Q1d8wu5eOiFUiEyXWeGxFxC/fNmenoMcPmWL0vmDlMT1HCXgjuuE5qtxutsx
+        5uLyI9EInMmg6BOG6BAnpJj7IYh/wdthykbqJIpx5TgYhLg0MHPPRmLgbuqs5bMd
+        8lwmJFfEB6WrI7MzLgp10zUK/lNzzkL+tgf6/WCFsQIDAQABo0IwQDAdBgNVHQ4E
+        FgQUzgGNBib5LEIFf5T9eqGcCE4n3GgwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8B
+        Af8EBAMCAuQwDQYJKoZIhvcNAQELBQADggIBAMx3GUtkB/5Tbs1aLuDzoybqqOA8
+        H0g+EvNgxap8SLJcgd1bHfC7kpaBjexw7Af7KRBRINZaeue91Nyq3stgn37oI/dw
+        mEzfChaWA1qSH0Ob7y2u378NQOx3Q6He7wRBjUYB3wDzMSkgY0NDp3Di65gYywv4
+        NcZ7oyDD3A7jTw6A93AqWBZiepWiD8/IWw6z2ACoJx488y+DM1+fLynulJIbgX8E
+        ldhfFu9kJjtxON5OhDYgtbmDrHf/gidHZU0JpgHeFUIOem1ZReTFieyWvbflP2eI
+        Xowq2xAO9VUBKT9x3K6p4+Ft2Uo6mLJGhh5iSvZnglsMcMSrzS5+L/Opp7vS8cqS
+        Mpt/ztaMhvVz5eFfEgumQ34ypNL/RgowwOclBzFHK0b7OrBJbE2FxE8sVNx6lQH3
+        oXc/PgXfn/5IrfNz7/JzyDmHfxSORSA6B4fwWdMbm9ne0xdxE3wHYXYN+Cjj3oxq
+        7/dpvYiPqwx7RdsN5pVqMCqT7qxqTRuEGOgY4L1D5psT1CHrlmM97uJVaeX36tO7
+        QhNcumPXvvb721ziFpcKuCBMXegCA3mmTp8vlKkHarTCfeSOCav4/f8CDhJ4vk+r
+        nDByGEoTVVPjPeIFm7b9/glUw8uf7dPBOs/52OzFmoJV292pMONB/kP30mqDiM4f
+        FsxkD+cMszSeGyYT
+        -----END CERTIFICATE-----
+      ## @param certs.custom.frontProxyCrt crt of the front proxy certificate
+      frontProxyCrt: |
+        -----BEGIN CERTIFICATE-----
+        MIID1DCCAbygAwIBAgIUTeyQpt40Eij9A1oBh1Y3/wRn1PkwDQYJKoZIhvcNAQEL
+        BQAwJDEQMA4GA1UECgwHa2FybWFkYTEQMA4GA1UEAwwHa2FybWFkYTAeFw0yMjEx
+        MTYxNDAyMTNaFw0yMzExMTYxNDAyMTNaMCQxEDAOBgNVBAoMB2thcm1hZGExEDAO
+        BgNVBAMMB2thcm1hZGEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDL
+        j+wwUWSjUp4sUdvvbCsQkQ+6V4pCPqp91GQn2zmB5hFD64LqgQRyy2qxPr2lTjk9
+        QLA9OF0AR84va71MNdGeXQ2D3wpEiOGnRc4Md9QDk5pT620JGyXx5RR82DsSxjPu
+        lP3UYlOCZUBINV4c5vqQ5vZVZLzrhrB8DCfwLQLTsjO4Hi72I4Hx1z10q1zZkaZl
+        8XccFGX86b5KWJVwRzJ2lf4sbrdnDPxfjWymTUj3JVx80j5OQ5nmMHam4jI2yNp6
+        pcbiirC3Zow3mMQGXMeBfjEN9O4qKAcMiscIZQeNvDBTihGG6gdrA3Y9XbN5eYo1
+        2OEokKXe3F35OlXkX/mpAgMBAAEwDQYJKoZIhvcNAQELBQADggIBALXLKm3unKCw
+        bihRQs2QKmXEBtWNfEjpGSVM4hoEv3y8BVOTo60PR7SfFEbHK80NRG9dK1UHgfOf
+        iBvoOxcvfyEPVYJAyb9+tmJHmnY2l++6jWbon+O1I+jJuXIAyssSEC29SmCbf+gR
+        yES1wnucimSPVipR+c9AsN85v0T5GE+W6KLN9gGpqfGDGmtl/JoB9IiCxaG2inm+
+        AUGzZ886ZB7TGdu29/Y8sPISBb5yLzektvmF5N8RzBGEmiIMCGlohBN4pUCxIj2I
+        BVmRmJZ/czPONkyZvUChM8Gqol5YtsQoEfGyQMZOPmS+E+ejA0LaqpJsfmpAkKAz
+        lvBG3RAc+v/RZpwU60rtcjiIylrHaqIWq3WWMleLnuVKpBzIaCpTyDedDZ/hUjdX
+        N+P5pyLe1CoXvxZnyr+OVE180sLErmQnPj75F2KSgTRNKAh63vuWqxqFdybRqzGA
+        M0eYBHjMyH7SRXLp6MDdYDGZxTn21y2L+EfrjeFEGHABBGXNek+9E80wuiONtrPO
+        +kk6Jr/Dcpx55ltwwtA+RH4PvLtuqflF4B4Ag5Zu95EIemykjEvjy5TOIRUEkVOv
+        FXtTW8pkUzzYt6Xsu2dLreIwWvYF89xYSlSGNaSqL1VuXiH+qiXPSLT+X8ZumFud
+        E2jaUYlIqsHJFnH3oXXkp2gwAJEb7FLs
+        -----END CERTIFICATE-----
+      ## @param certs.custom.frontProxyKey key of the front proxy certificate
+      frontProxyKey: |
+        -----BEGIN RSA PRIVATE KEY-----
+        MIIEpAIBAAKCAQEAy4/sMFFko1KeLFHb72wrEJEPuleKQj6qfdRkJ9s5geYRQ+uC
+        6oEEcstqsT69pU45PUCwPThdAEfOL2u9TDXRnl0Ng98KRIjhp0XODHfUA5OaU+tt
+        CRsl8eUUfNg7EsYz7pT91GJTgmVASDVeHOb6kOb2VWS864awfAwn8C0C07IzuB4u
+        9iOB8dc9dKtc2ZGmZfF3HBRl/Om+SliVcEcydpX+LG63Zwz8X41spk1I9yVcfNI+
+        TkOZ5jB2puIyNsjaeqXG4oqwt2aMN5jEBlzHgX4xDfTuKigHDIrHCGUHjbwwU4oR
+        huoHawN2PV2zeXmKNdjhKJCl3txd+TpV5F/5qQIDAQABAoIBAGuz64CpH/k19lB2
+        w0pLTgHG7q5mMNXZ+DT5UkCwQh4Tj2EDU9Iljyf5rqq3CnpTB//7oQPTNYm3dEUs
+        2QxgkVcb3tG+Cd23GsV5Lor0P63gw8/RCXC+93WkAhIICkFlswZxuFdN6udcEQXj
+        jrb2Eu7l9MG7uiVXrzsC54KxHgTJGqtkOYwbFEh3BJc8D5pYJtUOaSQdWCJ4ZbFo
+        rNVJQm9VYYx9K/FDslXgZOSOqp2PzF/NvDODdc5hltzydiIwTfLvP66GN/o6Ndeb
+        vdS32QizVKsU7oI45CKD7wXNLrmN/G2ddwSd049hCxkFS/KH4IZvC+Ek7N1+Oe1Q
+        SXdCFc0CgYEA/UXELNYFRHProBocavCO8kmyNaIFCLxtcsFIIYfGSNkbJAOYwd9n
+        ms0iorZSOc7Lqdhp6DG/m6K7DOnw/mXG93aCN/j6MGnCVDiYLPRi1I8sx3sp9UNk
+        fpgt1AeEzBUJnVuvVjLYba8JOnDUi4C4S8sM1j0bUXTpdNzjBXs7chsCgYEAzcEc
+        zhTVIAP7r8tRru/9OWQnd4Aj0BnJwxKJlMyPD2VqfDxo5YctGlSnf+cUiyLPaQnJ
+        tWhCN5XGPvcd2ImelETexIzlUaXXx6zGef5CWNNhl8WtqHT0UPKFQ1Df9m+8ptxJ
+        pZmfpwd9+hOSD2F3jEJyErMqZNKk7g+D95dTX4sCgYAfWnCjoEb8p2EG69SSxH7d
+        rZPbIdh/sVvXNegpBnbcc8vxVGSns3FO75AXFnztXRVHTFwn+2id6rI/MgK8a3sL
+        DWenaDIIpj8BUBQ+lG5bo/HGLBAQpaweI9agheHBpeUPztbQ0/CI+38n9enJ70Bh
+        WZyYNO5Z0iBIcEPGXPAJ+wKBgQCdErKZxJ+bLE9EudOm2AEZghL7EHDGmhlD+W/c
+        j3kbSNHM/BUcPGC7PCsO4mr1eOKcDmPVQD1kz8sjIGXBe/X6vMTPibw6439iKMzw
+        LqGZy+0x/y/+bSJidXI0nJYNPOno/Dyg1jFiQr7yXWRgp4irI8KP8gUIKSLNtjyJ
+        lBWK1wKBgQDiTxM6eeiUHlWIzD8larmRHXtmKYaSHhnV9s+MDKaRx9vvhCFqh1pY
+        AAVicwXo7Um776xN8ajfyzaJ2hjTEYO46GssfoeCGAxGTace96x/S+PiZHtglR4O
+        tQtJXkxTBVKG6Nxq7cj9vIBQCKD1FZKS0BULXFNwhKgbXQ1ph37Oug==
+        -----END RSA PRIVATE KEY-----
 
   clusterDomain: "cluster.local"
 
@@ -8,3 +183,24 @@ karmada-system:
     "descheduler",
     "search",
   ]
+
+  scheduler:
+    replicaCount: 1
+  webhook:
+    replicaCount: 1
+  controllerManager:
+    replicaCount: 1
+  apiServer:
+    replicaCount: 3
+  aggregatedApiServer:
+    replicaCount: 1
+  kubeControllerManager:
+    replicaCount: 1
+  etcd:
+    replicaCount: 3
+  schedulerEstimator:
+    replicaCount: 1
+  descheduler:
+    replicaCount: 1
+  search:
+    replicaCount: 1
