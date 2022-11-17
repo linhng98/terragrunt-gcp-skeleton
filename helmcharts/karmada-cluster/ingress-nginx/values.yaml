@@ -2,6 +2,8 @@
 ingress-nginx:
   controller:
     kind: DaemonSet
+    service:
+      loadBalancerIP: "34.124.160.108"
     metrics:
       enabled: true
       serviceMonitor:
