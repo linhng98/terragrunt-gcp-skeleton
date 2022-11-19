@@ -1,0 +1,9 @@
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+spec:
+  profile: remote
+  values:
+    istiodRemote:
+      injectionPath: /inject/cluster/serverless-cluster-b/net/serverless-cluster-b-network
+    global:
+      remotePilotAddress: "34.124.159.72"

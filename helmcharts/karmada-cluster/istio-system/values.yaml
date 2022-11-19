@@ -1,0 +1,42 @@
+---
+base:
+  global:
+    istioNamespace: istio-system
+
+istiod:
+  pilot:
+    env:
+      EXTERNAL_ISTIOD: "true"
+    resources:
+      requests:
+        cpu: 100m
+        memory: 50Mi
+  global:
+    meshID: asia-southeast1
+    multiCluster:
+      enabled: true
+      clusterName: karmada-cluster
+    network: &network karmada-cluster-network
+    proxy:
+      resources:
+        requests:
+          cpu: 10m
+          memory: 128Mi
+        limits:
+          cpu: 200m
+          memory: 500Mi
+
+gateway:
+  name: istio-ingressgateway
+  replicaCount: 1
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 100m
+      memory: 1024Mi
+  networkGateway: *network
+  service:
+    type: LoadBalancer
+    loadBalancerIP: "34.124.159.72"
