@@ -6,4 +6,4 @@ spec:
     istiodRemote:
       injectionPath: /inject/cluster/serverless-cluster-b/net/serverless-cluster-b-network
     global:
-      remotePilotAddress: "34.124.159.72"
+      remotePilotAddress: "35.240.156.67"

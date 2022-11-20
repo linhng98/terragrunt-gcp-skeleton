@@ -12,12 +12,12 @@ locals {
 }
 
 dependency "vpc" {
-  config_path = "../../vpc/asia-southeast1-network"
+  config_path = "../../vpc/asia-southeast2-network"
 }
 
 inputs = {
   name               = local.cluster_name
-  region             = "asia-southeast1"
+  region             = "asia-southeast2"
   regional           = true
   network            = dependency.vpc.outputs.network_name
   subnetwork         = "${local.cluster_name}-primary-subnet"

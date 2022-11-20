@@ -15,21 +15,21 @@ inputs = {
   network_name = "${local.network_name}"
   subnets = [
     {
-      subnet_name           = "karmada-cluster-primary-subnet"
+      subnet_name           = "serverless-cluster-b-primary-subnet"
       subnet_ip             = "192.168.0.0/21"
-      subnet_region         = "asia-southeast1"
+      subnet_region         = "asia-east2"
       subnet_private_access = "true"
     },
   ]
 
   secondary_ranges = {
-    karmada-cluster-primary-subnet = [
+    serverless-cluster-b-primary-subnet = [
       {
-        range_name    = "karmada-cluster-pod-secondary-subnet"
+        range_name    = "serverless-cluster-b-pod-secondary-subnet"
         ip_cidr_range = "10.0.0.0/14"
       },
       {
-        range_name    = "karmada-cluster-service-secondary-subnet"
+        range_name    = "serverless-cluster-b-service-secondary-subnet"
         ip_cidr_range = "10.4.0.0/14"
       }
     ]

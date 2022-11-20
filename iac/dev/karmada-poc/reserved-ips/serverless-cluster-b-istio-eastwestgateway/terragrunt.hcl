@@ -9,6 +9,6 @@ include {
 
 inputs = {
   names    = ["external-ip-${basename(get_terragrunt_dir())}"]
-  region  = "asia-southeast1"
+  region  = "asia-east2"
   address_type = "EXTERNAL"
 }

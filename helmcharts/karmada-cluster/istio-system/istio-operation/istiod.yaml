@@ -1,0 +1,14 @@
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+spec:
+  values:
+    global:
+      meshID: asia-southeast1
+      multiCluster:
+        clusterName: karmada-cluster
+      network: karmada-cluster-network
+  components:
+    pilot:
+      k8s:
+        env:
+          EXTERNAL_ISTIOD: true

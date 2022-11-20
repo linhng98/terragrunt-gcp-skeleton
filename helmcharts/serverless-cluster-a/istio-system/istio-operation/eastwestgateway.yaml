@@ -1,25 +1,26 @@
+---
 apiVersion: install.istio.io/v1alpha1
 kind: IstioOperator
 metadata:
-  name: ingress
+  name: eastwest
 spec:
   revision: ""
   profile: empty
   components:
     ingressGateways:
-      - name: istio-ingressgateway
+      - name: istio-eastwestgateway
         label:
-          istio: ingressgateway
-          app: istio-ingressgateway
-          topology.istio.io/network: serverless-cluster-b-network
+          istio: eastwestgateway
+          app: istio-eastwestgateway
+          topology.istio.io/network: serverless-cluster-a-network
         enabled: true
         k8s:
           env:
             # traffic through this gateway should be routed inside the network
             - name: ISTIO_META_REQUESTED_NETWORK_VIEW
-              value: serverless-cluster-b-network
+              value: serverless-cluster-a-network
           service:
-            loadBalancerIP: 34.126.91.172
+            loadBalancerIP: 34.128.65.57
             ports:
               - name: status-port
                 port: 15021
@@ -38,4 +39,4 @@ spec:
       istio-ingressgateway:
         injectionTemplate: gateway
     global:
-      network: serverless-cluster-b-network
+      network: serverless-cluster-a-network

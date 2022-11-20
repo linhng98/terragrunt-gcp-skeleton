@@ -1,4 +1,50 @@
 ---
 base:
-  base:
-    enableIstioConfigCRDs: true
+  global:
+    istioNamespace: istio-system
+
+#istiod:
+#  pilot:
+#    autoscaleEnabled: false
+#    replicaCount: 0
+#    env:
+#      EXTERNAL_ISTIOD: "false"
+#    resources:
+#      requests:
+#        cpu: 100m
+#        memory: 50Mi
+#  istiodRemote:
+#    injectionPath: /inject/cluster/serverless-cluster-b/net/serverless-cluster-b-network
+#  global:
+#    meshID: asia-southeast1
+#    remotePilotAddress: 35.240.156.67
+#    network: &network serverless-cluster-b-network
+#    externalIstiod: false
+#    configCluster: true
+#    proxy:
+#      logLevel: debug
+#      resources:
+#        requests:
+#          cpu: 10m
+#          memory: 128Mi
+#        limits:
+#          cpu: 200m
+#          memory: 500Mi
+#    logging:
+#      level: "default:debug"
+#
+#eastwest-gateway:
+#  name: istio-eastwestgateway
+#  replicaCount: 1
+#  resources:
+#    requests:
+#      cpu: 100m
+#      memory: 128Mi
+#    limits:
+#      cpu: 100m
+#      memory: 1024Mi
+#  networkGateway: *network
+#  service:
+#    type: LoadBalancer
+#    loadBalancerIP: "34.150.47.78"
+#
