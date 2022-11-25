@@ -16,14 +16,14 @@ inputs = {
 
   rules = [
     {
-      name        = "allow-ssh-ingress"
+      name                    = "allow-ssh-ingress"
       description             = null
       priority                = null
-      direction   = "INGRESS"
-      ranges      = ["0.0.0.0/0"]
+      direction               = "INGRESS"
+      ranges                  = ["0.0.0.0/0"]
       source_tags             = null
       source_service_accounts = null
-      target_tags = ["allow-ssh-ingress"]
+      target_tags             = ["allow-ssh-ingress"]
       target_service_accounts = null
       allow = [{
         protocol = "tcp"
@@ -35,14 +35,14 @@ inputs = {
       }
     },
     {
-      name        = "allow-nginx-ingress-http-ingress"
+      name                    = "allow-nginx-ingress-http-ingress"
       description             = null
       priority                = null
-      direction   = "INGRESS"
-      ranges      = ["0.0.0.0/0"]
+      direction               = "INGRESS"
+      ranges                  = ["0.0.0.0/0"]
       source_tags             = null
       source_service_accounts = null
-      target_tags = ["allow-nginx-ingress-http-ingress"]
+      target_tags             = ["allow-nginx-ingress-http-ingress"]
       target_service_accounts = null
       allow = [{
         protocol = "tcp"

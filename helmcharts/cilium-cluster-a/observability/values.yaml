@@ -1,0 +1,34 @@
+---
+loki-stack:
+  loki:
+    enabled: true
+    isDefault: false
+    serviceMonitor:
+      enabled: false
+  promtail:
+    enabled: true
+    config:
+      logLevel: info
+      serverPort: 3101
+      clients:
+        - url: http://{{ .Release.Name }}-loki:3100/loki/api/v1/push
+    serviceMonitor:
+      enabled: false
+
+prom:
+  grafana:
+    enabled: false
+
+  prometheusOperator:
+    prometheusConfigReloader:
+      resources:
+        requests:
+          cpu: 10m
+          memory: 50Mi
+
+  prometheus:
+    prometheusSpec:
+      ruleSelectorNilUsesHelmValues: false
+      serviceMonitorSelectorNilUsesHelmValues: false
+      podMonitorSelectorNilUsesHelmValues: false
+      probeSelectorNilUsesHelmValues: false

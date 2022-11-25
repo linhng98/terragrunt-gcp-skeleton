@@ -6,7 +6,7 @@ base:
 istiod:
   pilot:
     env:
-      EXTERNAL_ISTIOD: "true"
+      EXTERNAL_ISTIOD: 'true'
     resources:
       requests:
         cpu: 100m
@@ -27,7 +27,7 @@ istiod:
           cpu: 200m
           memory: 500Mi
     logging:
-      level: "default:debug"
+      level: default:debug
 
 eastwest-gateway:
   name: istio-eastwestgateway
@@ -42,7 +42,7 @@ eastwest-gateway:
   networkGateway: *network
   service:
     type: LoadBalancer
-    loadBalancerIP: "35.240.156.67"
+    loadBalancerIP: 35.240.156.67
 
 ingress-gateway:
   name: istio-ingressgateway
@@ -56,4 +56,4 @@ ingress-gateway:
       memory: 1024Mi
   service:
     type: LoadBalancer
-    loadBalancerIP: "34.124.159.72"
+    loadBalancerIP: 34.124.159.72

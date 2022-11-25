@@ -1,5 +1,6 @@
+---
 karmada:
-  installMode: "host"
+  installMode: host
 
   certs:
     mode: auto
@@ -176,13 +177,9 @@ karmada:
         tQtJXkxTBVKG6Nxq7cj9vIBQCKD1FZKS0BULXFNwhKgbXQ1ph37Oug==
         -----END RSA PRIVATE KEY-----
 
-  clusterDomain: "cluster.local"
+  clusterDomain: cluster.local
 
-  components: [
-    "schedulerEstimator",
-    "descheduler",
-    "search",
-  ]
+  components: [schedulerEstimator, descheduler, search]
 
   scheduler:
     replicaCount: 1

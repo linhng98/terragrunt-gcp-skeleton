@@ -20,6 +20,12 @@ inputs = {
       subnet_region         = "asia-southeast1"
       subnet_private_access = "true"
     },
+    {
+      subnet_name           = "cilium-cluster-a-primary-subnet"
+      subnet_ip             = "192.168.8.0/21"
+      subnet_region         = "asia-southeast1"
+      subnet_private_access = "true"
+    },
   ]
 
   secondary_ranges = {
@@ -31,6 +37,16 @@ inputs = {
       {
         range_name    = "karmada-cluster-service-secondary-subnet"
         ip_cidr_range = "10.4.0.0/14"
+      }
+    ]
+    cilium-cluster-a-primary-subnet = [
+      {
+        range_name    = "cilium-cluster-a-pod-secondary-subnet"
+        ip_cidr_range = "10.8.0.0/14"
+      },
+      {
+        range_name    = "cilium-cluster-a-service-secondary-subnet"
+        ip_cidr_range = "10.12.0.0/14"
       }
     ]
   }

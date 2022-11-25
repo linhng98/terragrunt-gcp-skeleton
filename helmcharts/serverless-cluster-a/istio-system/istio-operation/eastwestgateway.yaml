@@ -4,7 +4,7 @@ kind: IstioOperator
 metadata:
   name: eastwest
 spec:
-  revision: ""
+  revision: ''
   profile: empty
   components:
     ingressGateways:

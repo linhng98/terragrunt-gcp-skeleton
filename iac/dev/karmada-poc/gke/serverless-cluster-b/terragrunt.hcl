@@ -37,7 +37,7 @@ inputs = {
   remove_default_node_pool  = true
   default_max_pods_per_node = 110
   create_service_account    = true
-  master_ipv4_cidr_block = "10.255.255.32/28"
+  master_ipv4_cidr_block    = "10.255.255.32/28"
 
   node_pools = [
     {

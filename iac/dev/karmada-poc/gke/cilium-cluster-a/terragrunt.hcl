@@ -19,6 +19,7 @@ inputs = {
   name               = local.cluster_name
   region             = "asia-southeast1"
   regional           = true
+  #datapath_provider = "ADVANCED_DATAPATH"
   network            = dependency.vpc.outputs.network_name
   subnetwork         = "${local.cluster_name}-primary-subnet"
   kubernetes_version = "1.23.11-gke.300"
@@ -42,7 +43,7 @@ inputs = {
   node_pools = [
     {
       name         = "worker-pool"
-      machine_type = "n1-highmem-2"
+      machine_type = "n1-standard-2"
       min_count    = 1
       max_count    = 2
       disk_size_gb = 100

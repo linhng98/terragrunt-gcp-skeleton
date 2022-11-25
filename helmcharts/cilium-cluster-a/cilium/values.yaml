@@ -1,0 +1,97 @@
+cilium:
+  debug:
+    enabled: true
+
+  cluster:
+    name: cilium-cluster-a
+    id: 0
+
+  gke:
+    enabled: true
+
+  cni:
+    install: true
+    binPath: /home/kubernetes/bin
+  
+  hubble:
+    enabled: true
+    metrics:
+      enabled: 
+        - dns:query;ignoreAAAA
+        - drop
+        - tcp
+        - flow
+        - icmp
+        - http
+      serviceMonitor:
+        enabled: true
+        extraIpAddresses: []
+
+    relay:
+      enabled: true
+      rollOutPods: true
+      
+      prometheus:
+        enabled: true
+        port: 9966
+        serviceMonitor:
+          enabled: true
+    ui:
+      enabled: true
+      
+      ingress:
+        enabled: false
+        annotations: {}
+          # kubernetes.io/ingress.class: nginx
+          # kubernetes.io/tls-acme: "true"
+        className: ""
+        hosts:
+          - chart-example.local
+        tls: []
+        #  - secretName: chart-example-tls
+        #    hosts:
+        #      - chart-example.local
+
+  ipam:
+    mode: "kubernetes"
+  
+  ipv4NativeRoutingCIDR: 10.8.0.0/14
+
+  monitor:
+    enabled: true
+
+  prometheus:
+    enabled: true
+    port: 9962
+    serviceMonitor:
+      enabled: true
+  
+  proxy:
+    prometheus:
+      enabled: true
+      port: "9964"
+    sidecarImageRegex: "cilium/istio_proxy"
+
+  tunnel: "disabled"
+
+  operator:
+    enabled: true
+    rollOutPods: true
+    replicas: 2
+    
+    prometheus:
+      enabled: true
+      port: 9963
+      serviceMonitor:
+        enabled: true
+
+  nodeinit:
+    enabled: true
+    reconfigureKubelet: true
+    removeCbrBridge: true
+
+  clustermesh:
+    useAPIServer: true
+    config:
+      enabled: true
+      domain: cilium-cluster-a.cilium.io

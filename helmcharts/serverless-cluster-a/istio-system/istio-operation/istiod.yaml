@@ -1,3 +1,4 @@
+---
 apiVersion: install.istio.io/v1alpha1
 kind: IstioOperator
 spec:
@@ -6,4 +7,4 @@ spec:
     istiodRemote:
       injectionPath: /inject/cluster/serverless-cluster-a/net/serverless-cluster-a-network
     global:
-      remotePilotAddress: "35.240.156.67"
+      remotePilotAddress: 35.240.156.67

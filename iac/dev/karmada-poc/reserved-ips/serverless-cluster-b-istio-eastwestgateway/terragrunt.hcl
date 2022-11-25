@@ -8,7 +8,7 @@ include {
 }
 
 inputs = {
-  names    = ["external-ip-${basename(get_terragrunt_dir())}"]
-  region  = "asia-east2"
+  names        = ["external-ip-${basename(get_terragrunt_dir())}"]
+  region       = "asia-east2"
   address_type = "EXTERNAL"
 }

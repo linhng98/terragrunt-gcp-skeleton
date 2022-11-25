@@ -17,11 +17,11 @@ dependency "external_ip" {
 
 inputs = {
   instance_template = dependency.template.outputs.self_link
-  subnetwork = "karmada-cluster-primary-subnet"
-  hostname = "wireguard-server"
-  zone = "asia-southeast1-c"
+  subnetwork        = "karmada-cluster-primary-subnet"
+  hostname          = "wireguard-server"
+  zone              = "asia-southeast1-c"
   access_config = [{
-    nat_ip = dependency.external_ip.outputs.addresses[0]
+    nat_ip       = dependency.external_ip.outputs.addresses[0]
     network_tier = "PREMIUM"
   }]
 }
