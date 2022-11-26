@@ -1,0 +1,126 @@
+cilium:
+  debug:
+    enabled: true
+
+  cluster:
+    name: cilium-cluster-b
+    id: 2
+
+  tls:
+    secretsBackend: local
+    ca:
+      cert: &ca_cert "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURGakNDQWY2Z0F3SUJBZ0lVQ0o0WGhNekh4T1pPVFpENkRwNmw3ZmhzTy80d0RRWUpLb1pJaHZjTkFRRUwKQlFBd0l6RVBNQTBHQTFVRUNnd0dRMmxzYVhWdE1SQXdEZ1lEVlFRRERBZFNiMjkwSUVOQk1CNFhEVEl5TVRFeQpOakUxTkRreE1Wb1hEVEl5TVRJeU5qRTFORGt4TVZvd0l6RVBNQTBHQTFVRUNnd0dRMmxzYVhWdE1SQXdEZ1lEClZRUUREQWRTYjI5MElFTkJNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQXQyRDMKNkdSdUg5TlZ0QUs3N2poUkVtS1kzTWQxNklDcEJoYUVvWUpreDU3VFltN2lqWllmaGtyLzdCRkJOb0NGRW5xNwpGeGxNYkVVcWFIS0poTDVsWGxnUG9mN05GMDllcUU1UU5LZ3lhd25xWktWWWFxVmIvT3RZUmlRWHJZYWFVcWpzCkVCSEM3cTVvakFaSHhpQUlKMzM4YWRHVzVBOFFEcTFlN3Z5bTdxRWNCT3o3RUFNZExHSHc1ZWVzUUUwUzhyU1cKTUkzSEd4NFFOa3lYQzdqa2pyOTUvWXY4eHVxMGpzdVpzQ2ZmZndpY3ZzcXNXYmVHelB4eXdsQW1XOXJhaktrLwpkL1owMWNmdlVPcVYxdUlxL1hKVngyaFhXZUhjdSs0dlhSYm9IeDR2dkFMc3hWSEJDK0tsaWFndExHbFJ5bGZ2CkJ0K2lIcE5QNWhnc1cvZ1lOUUlEQVFBQm8wSXdRREFkQmdOVkhRNEVGZ1FVd3hZRlphVkY4YzB1eUYySFlWOUYKekp0aURsZ3dEd1lEVlIwVEFRSC9CQVV3QXdFQi96QU9CZ05WSFE4QkFmOEVCQU1DQXVRd0RRWUpLb1pJaHZjTgpBUUVMQlFBRGdnRUJBQ3I0bkhXeHdBSERLMm1TdVNHZzMrY1RrWWlaS0JTUGhsbFlqZlY0aFdFcThqWmduRExoCkhpdDd3L01pYkZkdU9IREpabjg3OW5hU0cxVXdEZDBMWWFSWFNNR2xHYTk4K205SEZZcFdCNVordmlUQ0dXdVUKUHJmT0VxQU9Nbkt6SWNTYkxLZUZRbTJGN1o3bHhORVRMUXkxOVVkWDUvSjNNV08rYkx1YStjUW83MmFLRTg0OApMS2RnblJqUWJSeUM5WG1EbDVNODB1dlhSSmMyNnozTEJ4bk8zYVdrb1RrcDJiY2gyZXpnekFUNlFwblgzK2NlCmI3RWs2dlkyOUJFZUdtK0w2ZjdLMERJalpzbytsTS9ScXErQkdMdHlYVUtNQnY1Vm1xV0NKZGxZRnlmMk9CNUUKV1JEV1czQi9zOWdZUWxTaHpNZGIvQ0pialpRTU1Sd0lFRUk9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+      key: &ca_key "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFcEFJQkFBS0NBUUVBdDJEMzZHUnVIOU5WdEFLNzdqaFJFbUtZM01kMTZJQ3BCaGFFb1lKa3g1N1RZbTdpCmpaWWZoa3IvN0JGQk5vQ0ZFbnE3RnhsTWJFVXFhSEtKaEw1bFhsZ1BvZjdORjA5ZXFFNVFOS2d5YXducVpLVlkKYXFWYi9PdFlSaVFYcllhYVVxanNFQkhDN3E1b2pBWkh4aUFJSjMzOGFkR1c1QThRRHExZTd2eW03cUVjQk96NwpFQU1kTEdIdzVlZXNRRTBTOHJTV01JM0hHeDRRTmt5WEM3amtqcjk1L1l2OHh1cTBqc3Vac0NmZmZ3aWN2c3FzCldiZUd6UHh5d2xBbVc5cmFqS2svZC9aMDFjZnZVT3FWMXVJcS9YSlZ4MmhYV2VIY3UrNHZYUmJvSHg0dnZBTHMKeFZIQkMrS2xpYWd0TEdsUnlsZnZCdCtpSHBOUDVoZ3NXL2dZTlFJREFRQUJBb0lCQUJCcExDWnUvbS80c0wzSQpWTnN2elFtUkswN3V4cjJFN2h0dVhuWTV2aDBqT0pXaGlNTFZBWU02S1FjT1VFQzVaYTlPcm5tVnVRSWplblVZCmN2Z2ZOZUVvamxXWUFQQ3FHTFdGTktaUnV4bGJMTS9QQUVlaS9zVjJwbEs0bmluWVZ1MDQwczlwVjRHV3VDSjMKMldxQXFWb25helJwSGxEUWpFWlQrNS8xbWxiV2kyUGx5Q3ZOVWFiZTNOQ2R3R3ZBeVJzb0tpTjFCNEpsYlg1SQpVVTFscERNL1hBcWNxTjB1UytXNlhOU2hNUG54aXdKWjlxQ0xQRGhNWU5ZZkIzRVlJY2pSS2pzemJTTmQ5emoxCnBkZkxoeVhSdVlYWndEQkJtYjd0UEZnZWVnY29uaEhiQktqR2JvK01pMnRKS2p4cnZCNDBDc0x5eE9OS0VUM20KdlZyTDE4MENnWUVBNGUxR1grTTZpbVcwSHdzUzY2cGo2RDlFdCtjYzduM21oZ2wvbjQ0emRlait0WjVsNTNIUApaUVZ3akovZjZHZE9vQ0hoM01iWnA2VXQ0QTRQRHg5QkZDWENGd2c2dTFGS3RjS21Vc2NQVFN4WVlsTTl1dU9NCkRyblJPaDVrUWpsZUlQMVFBRUpsZXNIaFlhZkQ3dkFWSC85UkVKQ05lOVJpNXhPeVI2U1NMV3NDZ1lFQXo4blIKU3FrL2xXNHVORmxqUTQyeUljRmtqT1lBYUl5VzZzaEpLbVd4QXVJdW5rK3FuN1M3NzBvNmE4Z2c5ZDFZYnhDSgpRNzZiMTJnSUk5Q0FPZGhGVWVmWDkxRE5JREErRlQ1RG5haEZ5OUYvOFhibmhYV0QycVMwb0NoeDNlb3NtaU52CnVkZ2ZFU3RiNGFMc3NDMVFvcXZsOVppeFpmaUdNeUtnRU9qQm1OOENnWUJUY0ZvcFY3WnJIcHlqU21lMmVidGsKTHRtbVFjakJtK1hqWXVhcmVzMHVvdHBQSVN6cGlYTGJFR004ekY3WmFpM3puZy9ZaGVna3JqQi9LeklNbDdKbApTbnlnSFAzejZGWDdRdVJDZGhvRW1uZ1orRHc0SlltNGRvLzdNdlk4THd2QWkwMWNpeWtIYVV0ZjBhSGZRUFBNCldYTUs5eGdKdjZxM1JPTDI2cVRCK1FLQmdRQ2I4WW9LYjRVUnY5UWJZNjZVeDJZVjRVOTJVek9oUTBvTVFHNXcKekVzUnIvQnV6Ymx2RExReS9WRmxESmg0RFR2T2R1bWRseExja2UzeCt3d1EzWmdBeFhBVzQyUmZNUFdXK2RqRApITVB0R0hqZUhtL1pnSDJKZlMwMk9jUmpXTmxLZ1NmYm9UQ0hzVFBPM25pbUxBd2xXYjlIRithamNlWTl3RkhDCi92dzBud0tCZ1FDTFdjYkZMV014NndHLzJlTit4cWdiN3RNS2xFZUVjdERCNk1WNjhRN3NDa1lJS0J3ODZlZWwKK2FLSjVBV1NDTHJYUUltNFhFTjdwUmRWdHNQSUd5eVdzRUtxanFQQmppVXlPa1FMYjRwSW9Ea1JkVlM3dnQzWApVN2w4ZHgyRkZ5YWF2dXVUTUxCRm8rQ2FTcndKTEFZc0dJTm52Zk12RzVrdEg0cnI1K0ZZb0E9PQotLS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQo="
+      certValidityDuration: 1095
+
+  gke:
+    enabled: true
+
+  cni:
+    install: true
+    binPath: /home/kubernetes/bin
+  
+  hubble:
+    enabled: false
+    metrics:
+      enabled: 
+        - dns:query;ignoreAAAA
+        - drop
+        - tcp
+        - flow
+        - icmp
+        - http
+      serviceMonitor:
+        enabled: true
+        extraIpAddresses: []
+
+    relay:
+      enabled: false
+      rollOutPods: true
+      
+      prometheus:
+        enabled: true
+        port: 9966
+        serviceMonitor:
+          enabled: true
+    ui:
+      enabled: false
+      
+      ingress:
+        enabled: false
+        annotations: {}
+          # kubernetes.io/ingress.class: nginx
+          # kubernetes.io/tls-acme: "true"
+        className: ""
+        hosts:
+          - chart-example.local
+        tls: []
+        #  - secretName: chart-example-tls
+        #    hosts:
+        #      - chart-example.local
+
+  ipam:
+    mode: "kubernetes"
+  
+  ipv4NativeRoutingCIDR: 10.16.0.0/14
+
+  monitor:
+    enabled: true
+
+  prometheus:
+    enabled: true
+    port: 9962
+    serviceMonitor:
+      enabled: true
+  
+  proxy:
+    prometheus:
+      enabled: true
+      port: "9964"
+    sidecarImageRegex: "cilium/istio_proxy"
+
+  tunnel: "disabled"
+
+  operator:
+    enabled: true
+    rollOutPods: true
+    replicas: 2
+    
+    prometheus:
+      enabled: true
+      port: 9963
+      serviceMonitor:
+        enabled: true
+
+  nodeinit:
+    enabled: true
+    reconfigureKubelet: true
+    removeCbrBridge: true
+
+  externalWorkloads:
+    enabled: true
+
+  clustermesh:
+    useAPIServer: true
+    config:
+      enabled: true
+      domain: &cluster_domain cilium-cluster-b.cilium.io
+    apiserver:
+      service:
+        type: LoadBalancer
+        loadBalancerIP: 192.168.23.1
+        annotations:
+          cloud.google.com/load-balancer-type: "Internal"
+          networking.gke.io/internal-load-balancer-allow-global-access: "true"
+
+      tls:
+        ca:
+          cert: *ca_cert
+          key: *ca_key
+      replicas: 3
+
+  #etcd:
+  #  enabled: true
+  #  managed: true
+  #  k8sService: true
+  #  #clusterDomain: *cluster_domain
