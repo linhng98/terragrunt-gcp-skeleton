@@ -18,5 +18,6 @@ inputs = {
     "sqladmin.googleapis.com",
     "servicenetworking.googleapis.com",
     "redis.googleapis.com",
+    "dns.googleapis.com",
   ]
 }
