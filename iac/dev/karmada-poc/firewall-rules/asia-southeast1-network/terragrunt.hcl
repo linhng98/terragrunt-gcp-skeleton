@@ -53,5 +53,24 @@ inputs = {
         metadata = "INCLUDE_ALL_METADATA"
       }
     },
+    {
+      name                    = "allow-all-subnet-ingress"
+      description             = null
+      priority                = null
+      direction               = "INGRESS"
+      ranges                  = ["10.0.0.0/8", "192.168.0.0/16", "172.16.0.0/16"]
+      source_tags             = null
+      source_service_accounts = null
+      target_tags             = null
+      target_service_accounts = null
+      allow = [{
+        protocol = "all"
+        ports    = []
+      }]
+      deny = []
+      log_config = {
+        metadata = "INCLUDE_ALL_METADATA"
+      }
+    },
   ]
 }
